@@ -13,7 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('users');
+        Schema::table('subjects', function (Blueprint $table) {
+            $table->integer('department_id');
+            $table->integer('level_id');
+        });
         
     }
 

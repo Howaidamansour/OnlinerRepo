@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('proffesor_subjects');
+        Schema::dropIfExists('professor_subjects');
+        
+        Schema::create('professor_subjects', function (Blueprint $table) {
+            $table->id();
+            $table->integer('professor_id');
+            $table->integer('subject_id');
+            $table->timestamps();
+        });
         
     }
 
@@ -24,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('professor_subjects');
     }
 };

@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('users');
-        
+        Schema::table('questions', function (Blueprint $table) {
+            $table->boolean('is_single_choice');
+            $table->char('difficulty');
+        });
     }
 
     /**

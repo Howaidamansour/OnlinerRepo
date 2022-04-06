@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('users');
+
         
     }
 
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('professor_questions');
     }
 };

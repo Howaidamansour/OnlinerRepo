@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  
   <!-- navbar color : #b3ffcc -->
   <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -232,10 +236,10 @@
 		<div class="navbar-collapse collapse" id="collapse-1">
 			<!-- Nav Left -->
 			<ul class="nav navbar-nav">
-				<!-- Profile -->
+				<!-- Products -->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						<span class="fa fa-tags"></span><span class="link"> {{$user->first_name}} {{$user->last_name}}</span> <span class="fa fa-caret-down"></span></a>
+						<span class="fa fa-tags"></span><span class="link"> Products</span> <span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#"><span class="fa fa-tag"></span> Catalogue 1</a></li>
 						<li><a href="#"><span class="fa fa-tag"></span> Catalogue 2</a></li>
@@ -246,7 +250,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						<span class="fa fa-gears"></span><span class="link"> Services</span> <span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="{{route('departments.index', ['user' => $user->id])}}"><span class="fa fa-gear"/></span> Departments</a></li>
+						<li><a href="#"><span class="fa fa-gear"/></span> Service 1</a></li>
 						<li><a href="#"><span class="fa fa-gear"/></span> Service 2</a></li>
 						<li><a href="#"><span class="fa fa-gear"/></span> Service 3</a></li>
 					</ul>
@@ -266,16 +270,9 @@
       <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
        width="40" height="40" style="
         border-radius: 50%;" class="rounded-circle float-left">
-        
-
 		</div>
-        
-</div>
 	</div>
 </nav>
-
-
-@yield('content')
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

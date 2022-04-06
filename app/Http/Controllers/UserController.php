@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Call;
 use App\Models\Level;
 use App\Models\Department;
+use Session;
 
 
 class UserController extends Controller
@@ -27,6 +28,11 @@ class UserController extends Controller
     public function login(Request $request){
 
         $email = $request->email;
+
+        // Session::put('emaili', $email);
+        // Session::put('shose', 'myshoes');
+        // dd(Session::get('emaili'));
+
         $password = $request->password;
         $userfromDb = User::where([
             ['email', '=', $email],
@@ -37,9 +43,9 @@ class UserController extends Controller
             return redirect()->route('showLoginForm');
         }
         else {
-            return 'you have logged in successfully!';
+            Session::put('user', $userfromDb);
+            return view('home', ['user' => $userfromDb]);
         }
-
     }
     public function register(Request $request){
         

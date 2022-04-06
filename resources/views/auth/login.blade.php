@@ -46,7 +46,7 @@
             <button type="button" class="btn btn-primary btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
             </button>
-
+            
             <button type="button" class="btn btn-primary btn-floating mx-1">
               <i class="fab fa-twitter"></i>
             </button>
